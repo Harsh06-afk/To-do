@@ -17,6 +17,16 @@ function addTask() {
   saveData();
 }
 
+function myTsk(e) {
+  if (e.keyCode === 13) {
+    addTask();
+  }
+}
+//ONE MORE WAY
+// inputBox.addEventListener("keydown", function (e) {
+//   if (e.key === "Enter")
+//     addTask();
+// });
 listContainer.addEventListener("click", function (e) {
   if (e.target.tagName === "LI") {  
     e.target.classList.toggle("checked");
